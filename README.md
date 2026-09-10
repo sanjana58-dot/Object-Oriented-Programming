@@ -82,11 +82,13 @@ public:
   a constructor is a special member function that is automatically invoked when an object is created and is primarily used to initialize the object's state.<br>
 
   <img width="496" height="295" alt="image" src="https://github.com/user-attachments/assets/d1fc8ec8-3d93-412c-9001-5e7140fe58dd" />
-
+<br>
+<br>
 
   <img width="506" height="381" alt="image" src="https://github.com/user-attachments/assets/0faad21f-2d92-4e3b-907a-6a93b7831757" />
 
-
+<br>
+<br>
   <img width="554" height="412" alt="image" src="https://github.com/user-attachments/assets/e28682ad-09b5-4d37-99f6-c077284cdc7a" />
 
 
@@ -374,14 +376,14 @@ int main(){
 <img width="548" height="197" alt="image" src="https://github.com/user-attachments/assets/fdf40cdc-eb3b-4fc6-906d-3063f751d2fa" />
 
 <br>
-
+<br>
 <img width="587" height="319" alt="image" src="https://github.com/user-attachments/assets/edf1996b-06e9-410e-914b-47078050453b" />
-
+<br>
 <img width="577" height="112" alt="image" src="https://github.com/user-attachments/assets/2a025f73-bcb4-4951-b8c7-b8467e38852f" />
-
+<br>
 
 <img width="628" height="292" alt="image" src="https://github.com/user-attachments/assets/6719cbcb-7fb8-4c7c-b110-9399c2c387f6" />
-
+<br>
 <img width="686" height="359" alt="image" src="https://github.com/user-attachments/assets/5a8413da-775c-4bc1-88aa-13b395ccd17b" />
 <BR>
 SO,<BR>
@@ -446,20 +448,20 @@ int main() {
 }
 <BR>
 <img width="551" height="317" alt="image" src="https://github.com/user-attachments/assets/fe1a1c70-a916-4df7-8f73-9cfef522d191" />
-
+<br>
 <BR>
 <img width="555" height="365" alt="image" src="https://github.com/user-attachments/assets/a670498b-384f-44b7-919c-a7aacd31b263" />
-
+<br>
 <br>
 <img width="578" height="147" alt="image" src="https://github.com/user-attachments/assets/14610e2d-e3d6-4294-8cae-aba00d12301d" />
-
+<br>
 <br>
 <img width="560" height="311" alt="image" src="https://github.com/user-attachments/assets/1218cb3b-f021-4d84-a530-2d06704ba89c" />
-
+<br>
 <br>
 <img width="565" height="93" alt="image" src="https://github.com/user-attachments/assets/94ffeef2-0629-4e10-bc0c-8cae9bc960c6" />
 
-
+<br>
 <br>
 <img width="506" height="400" alt="image" src="https://github.com/user-attachments/assets/4fe67029-da27-4d52-8e54-5a78d60625ea" />
 <br>
@@ -573,4 +575,135 @@ Child constructor
 <br>
 <img width="618" height="379" alt="image" src="https://github.com/user-attachments/assets/c9cecc34-c066-4c6f-bf4a-79eef87f576c" />
 <br>
+<br>
+=========================================CONSTRUCTOR WITH PARAMETERS============================================
 
+class Parent {
+
+public:
+    Parent(int x) {
+        cout << x;
+    }
+};
+<BR>
+class Child : public Parent {
+
+public:
+    Child(int x) : Parent(x) {
+    }
+};
+<BR>
+Child c(10);
+
+<BR>
+CALLS
+Parent(10)
+   ↓
+Child(10)
+<BR>
+THIS SYNTAX <br>
+Child(int x) : Parent(x) is called a constructor initializer list.<br>
+<br>
+=====================================QUICK REVISION===========================================================
+
+<br>
+
+What is inheritance?<br>
+A mechanism where a derived class acquires properties and behaviors of a base class, enabling code reuse and representing an IS-A relationship.<br>
+
+<br>
+Why is inheritance used?<br>
+Main reasons:
+
+Code reuse
+Extensibility
+Establishing relationships
+Supporting polymorphism
+<br>
+<br>
+What are the types of inheritance?<br>
+Single, multilevel, hierarchical, multiple, hybrid. <br>
+<br>
+Can a child directly access private members of its parent?<br>
+NO <br>
+<br>
+Which constructor executes first?<br>
+Parent/base constructor <br>
+<br>
+Which destructor executes first?<br>
+Child/derived destructor.<br>
+<br>
+Is Dog : Animal an IS-A or HAS-A relationship?<br>
+IS-A<br>
+<br>
+Is Car : Engine correct inheritance?<br>
+No. A car HAS-A engine, so composition is more appropriate.<br>
+<br>
+<br>
+<br><br>
+
+<-----------------------NOW INTERESTING PART IS # INHERITANCE IS NOT POLYMORPHISM------------------------>
+<br>
+when a child inherits from a parent class and both have different functions then it is called inheritance  because child can access both parents and its own functions and parent can access to only it's own functions so there is no overriding issue.
+<br>
+EXAMPLE<BR>
+class Animal {
+public:
+    void eat() {
+        cout << "Animal eating";
+    }
+};
+
+class Dog : public Animal {
+};<BR>
+THIS IS SIMPLE INHERITANCE.
+<bR>
+<br>
+----------------BUT IN POLYMORPHISM IT'S NOT THE CASE--------------------------------------<br>
+FUNCTION OVERLOADING → FUNCTION OVERRIDING → POLYMORPHISM<br>
+And overloading vs overriding<br>
+<br>
+<img width="607" height="423" alt="image" src="https://github.com/user-attachments/assets/b494df73-d514-41c6-9782-05108eadfc7b" />
+<br>
+<br>
+<br>
+<img width="626" height="420" alt="image" src="https://github.com/user-attachments/assets/dfafdd3f-ba70-4ff1-96f0-53537d55dd6f" />
+<br>
+<br>
+<br>
+===================NOW==================================<br><br>
+----------------WHAT EXACTLY THE POLYMORPHISM IS--------------------------------------
+Polymorphism is the ability of same interface, function or operation to exhibit different behavior depending on the context or the object on which it operates.
+<br>
+<br>
+THE WORD ITSELF SAYS
+<br>
+poly=many<br>
+morph=forms<br>
+so, Polymorphism = one interface, many forms of behavior.<br>
+                    POLYMORPHISM
+                         │
+             ┌───────────┴───────────┐
+             ↓                       ↓
+      Compile-time              Runtime
+      Polymorphism              Polymorphism
+             ↓                       ↓
+       Early Binding            Late Binding
+             ↓                       ↓
+     Function Overloading       Overriding
+     Operator Overloading       Virtual Functions
+<br>
+<br>
+Binding refers to the process of converting
+identifiers (such as variable and performance
+names) into addresses. Binding is done for each
+variable and functions. For functions, it means that
+matching the call with the right function definition
+by the compiler.
+• It takes place either at compile time or at runtime.
+<br>
+<br>
+<img width="515" height="214" alt="image" src="https://github.com/user-attachments/assets/acaa987b-b686-4120-aaa4-1d13a36cb0d5" />
+<br>
+<br>
+I WILL RESUME FROM HERE TOMORROW
