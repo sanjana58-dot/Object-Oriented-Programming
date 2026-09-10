@@ -5,21 +5,29 @@ class is a user defined data type that encapsulates  data members and member fun
 -----------Object------------<br>
 An object is a runtime instance of a class that has it's own state and can perform behavior defined by the class.<br>
 # EXAMPLE<br>
-class Student{                 ----------------------------------------|
-public:                                                                |  
-  string name;                                                         | 
+class Student{                 
+public:                                                                
+  string name;                                                         
   int rollnumber;
   float marks;
-                                                       NOW WE CAN CREATE OBJECT ---------   Student S1;  
-  void study(){                                                                             s1.name="SANJANA";
-   cout<<"student is studying"<<endl;                                                       s1.rollnumber=102303205
-  }                                                                                         s1.marks=89;
-  void Displaydetails(){                                                                     s1.study(); s1.Displaydetails();
-    cout<<name<<" "<<rollnumber<<" "<<marks;                            | 
-  }                                                                     |
-}                            -------------------------------------------|
+                                                         
+  void study(){                                                                            
+   cout<<"student is studying"<<endl;                                                      
+  }                                                                                        
+  void Displaydetails(){                                                                     
+    cout<<name<<" "<<rollnumber<<" "<<marks;                            
+  }                                                                     
+}                            
 <br>
-                                FINAL DEFINITION <br>
+---------------------------- NOW WE CAN CREATE OBJECT --------------------<br>
+ Student S1; <br>
+ s1.name="SANJANA";<br>
+ s1.rollnumber=102303205  <br>                            
+ s1.marks=89;    <br>                          
+ s1.study(); s1.Displaydetails(); <br>     
+
+ 
+   ================================================== FINAL DEFINITION ============================================ <br>
   A class is a user-defined  blueprint that contains data and behavior of an entity . while an object is a runtime instance of a class with it's own state.<br>
   <img width="404" height="206" alt="image" src="https://github.com/user-attachments/assets/39117c10-3c3d-47b1-94c8-a1512b3defa2" />
 
